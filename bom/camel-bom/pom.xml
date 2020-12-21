@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.apache.camel</groupId>
     <artifactId>camel</artifactId>
-    <version>3.7.0-SNAPSHOT</version>
+    <version>3.8.0-SNAPSHOT</version>
     <relativePath>../../</relativePath>
   </parent>
   <artifactId>camel-bom</artifactId>
@@ -624,6 +624,11 @@
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
+        <artifactId>camel-datasonnet</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.camel</groupId>
         <artifactId>camel-debezium-common</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -1180,6 +1185,11 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-leveldb</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.camel</groupId>
+        <artifactId>camel-leveldb-legacy</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
@@ -1946,6 +1956,11 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-vertx-http</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.camel</groupId>
+        <artifactId>camel-vertx-kafka</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>

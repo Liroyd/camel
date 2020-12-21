@@ -67,7 +67,6 @@ public final class CSimpleHelper {
     private static final Pattern OFFSET_PATTERN = Pattern.compile("([+-])([^+-]+)");
 
     private static ExchangeFormatter exchangeFormatter;
-    private static Language beanLanguage;
 
     private CSimpleHelper() {
     }
@@ -408,7 +407,7 @@ public final class CSimpleHelper {
         return ObjectHelper.lookupConstantFieldValue(type, field);
     }
 
-    public static Object bean(Exchange exchange, String ref, String method, Object scope) {
+    public static Object bean(Exchange exchange, Language bean, String ref, String method, Object scope) {
         Class<?> type = null;
         if (ref != null && ref.startsWith("type:")) {
             try {
@@ -419,7 +418,6 @@ public final class CSimpleHelper {
             }
         }
 
-        Language bean = getOrCreateBeanLanguage(exchange.getContext());
         Object[] properties = new Object[5];
         properties[2] = type;
         properties[3] = ref;
@@ -430,16 +428,13 @@ public final class CSimpleHelper {
         return exp.evaluate(exchange, Object.class);
     }
 
-    private static Language getOrCreateBeanLanguage(CamelContext camelContext) {
-        if (beanLanguage == null) {
-            beanLanguage = camelContext.resolveLanguage("bean");
-        }
-        return beanLanguage;
-    }
-
-    public static long increment(Exchange exchange, Object number) {
+    public static Object increment(Exchange exchange, Object number) {
         Number num = exchange.getContext().getTypeConverter().tryConvertTo(Number.class, exchange, number);
-        if (num != null) {
+        if (num instanceof Integer) {
+            int val = num.intValue();
+            val++;
+            return val;
+        } else if (num instanceof Long) {
             long val = num.longValue();
             val++;
             return val;
@@ -450,9 +445,13 @@ public final class CSimpleHelper {
         }
     }
 
-    public static long decrement(Exchange exchange, Object number) {
+    public static Object decrement(Exchange exchange, Object number) {
         Number num = exchange.getContext().getTypeConverter().tryConvertTo(Number.class, exchange, number);
-        if (num != null) {
+        if (num instanceof Integer) {
+            int val = num.intValue();
+            val--;
+            return val;
+        } else if (num instanceof Long) {
             long val = num.longValue();
             val--;
             return val;

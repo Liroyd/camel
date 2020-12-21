@@ -24,8 +24,12 @@ import static org.apache.camel.language.csimple.CSimpleHelper.bodyAs;
 
 public class MedPredicate extends CSimpleSupport {
 
-    public MedPredicate(CamelContext context) {
-        init(context);
+    public MedPredicate() {
+    }
+
+    @Override
+    public boolean isPredicate() {
+        return true;
     }
 
     @Override

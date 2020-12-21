@@ -23,7 +23,7 @@
     <parent>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-parent</artifactId>
-        <version>3.7.0-SNAPSHOT</version>
+        <version>3.8.0-SNAPSHOT</version>
         <relativePath>../parent</relativePath>
     </parent>
 
@@ -175,6 +175,7 @@
         <module>camel-crypto</module>
         <module>camel-csimple-joor</module>
         <module>camel-csv</module>
+        <module>camel-datasonnet</module>
         <module>camel-debezium-common</module>
         <module>camel-debezium-mongodb</module>
         <module>camel-debezium-mysql</module>
@@ -381,6 +382,7 @@
         <module>camel-vertx</module>
         <module>camel-vertx-http</module>
         <module>camel-vertx-websocket</module>
+        <module>camel-vertx-kafka</module>
         <module>camel-weather</module>
         <module>camel-web3j</module>
         <module>camel-webhook</module>

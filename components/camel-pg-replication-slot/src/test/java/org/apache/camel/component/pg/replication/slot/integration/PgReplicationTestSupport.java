@@ -17,49 +17,21 @@
 
 package org.apache.camel.component.pg.replication.slot.integration;
 
-import org.apache.camel.test.testcontainers.junit5.ContainerAwareTestSupport;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.testcontainers.containers.GenericContainer;
-import org.testcontainers.containers.output.Slf4jLogConsumer;
-import org.testcontainers.containers.wait.strategy.Wait;
-import org.testcontainers.utility.TestcontainersConfiguration;
+import org.apache.camel.test.infra.postgres.services.PostgresLocalContainerService;
+import org.apache.camel.test.junit5.CamelTestSupport;
+import org.junit.jupiter.api.extension.RegisterExtension;
+import org.testcontainers.containers.PostgreSQLContainer;
 
-public class PgReplicationTestSupport extends ContainerAwareTestSupport {
+public class PgReplicationTestSupport extends CamelTestSupport {
 
-    public static final String CONTAINER_NAME = "pg-replication-slot";
+    @RegisterExtension
+    static PostgresLocalContainerService service;
 
-    private static final Logger LOG = LoggerFactory.getLogger(PgReplicationTestSupport.class);
-    private static final int POSTGRES_PORT = 5432;
-    private static final String POSTGRES_IMAGE = "postgres:13.0";
+    static {
+        PostgreSQLContainer container = new PostgreSQLContainer<>(PostgresLocalContainerService.DEFAULT_POSTGRES_CONTAINER)
+                .withDatabaseName("camel")
+                .withCommand("postgres -c wal_level=logical");
 
-    @Override
-    protected GenericContainer<?> createContainer() {
-        LOG.info(TestcontainersConfiguration.getInstance().toString());
-
-        GenericContainer<?> container = new GenericContainer(POSTGRES_IMAGE)
-                .withCommand("postgres -c wal_level=logical")
-                .withNetworkAliases(CONTAINER_NAME)
-                .withExposedPorts(POSTGRES_PORT)
-                .withEnv("POSTGRES_USER", "camel")
-                .withEnv("POSTGRES_PASSWORD", "camel")
-                .withLogConsumer(new Slf4jLogConsumer(LOG))
-                .waitingFor(Wait.forListeningPort());
-
-        return container;
+        service = new PostgresLocalContainerService(container);
     }
-
-    public String getAuthority() {
-        return String.format("%s:%s", getContainer(CONTAINER_NAME).getContainerIpAddress(),
-                getContainer(CONTAINER_NAME).getMappedPort(POSTGRES_PORT));
-    }
-
-    public String getUser() {
-        return "camel";
-    }
-
-    public String getPassword() {
-        return "camel";
-    }
-
 }

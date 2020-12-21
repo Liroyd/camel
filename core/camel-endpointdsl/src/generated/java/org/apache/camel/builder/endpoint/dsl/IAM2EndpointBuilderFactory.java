@@ -42,9 +42,12 @@ public interface IAM2EndpointBuilderFactory {
          * To use a existing configured AWS IAM as client.
          * 
          * The option is a:
-         * <code>software.amazon.awssdk.services.iam.IamClient</code> type.
+         * &lt;code&gt;software.amazon.awssdk.services.iam.IamClient&lt;/code&gt; type.
          * 
          * Group: producer
+         * 
+         * @param iamClient the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder iamClient(Object iamClient) {
             doSetProperty("iamClient", iamClient);
@@ -54,9 +57,12 @@ public interface IAM2EndpointBuilderFactory {
          * To use a existing configured AWS IAM as client.
          * 
          * The option will be converted to a
-         * <code>software.amazon.awssdk.services.iam.IamClient</code> type.
+         * &lt;code&gt;software.amazon.awssdk.services.iam.IamClient&lt;/code&gt; type.
          * 
          * Group: producer
+         * 
+         * @param iamClient the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder iamClient(String iamClient) {
             doSetProperty("iamClient", iamClient);
@@ -73,10 +79,13 @@ public interface IAM2EndpointBuilderFactory {
          * producer may take a little time and prolong the total processing time
          * of the processing.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: producer
+         * 
+         * @param lazyStartProducer the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder lazyStartProducer(boolean lazyStartProducer) {
             doSetProperty("lazyStartProducer", lazyStartProducer);
@@ -93,36 +102,48 @@ public interface IAM2EndpointBuilderFactory {
          * producer may take a little time and prolong the total processing time
          * of the processing.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: producer
+         * 
+         * @param lazyStartProducer the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder lazyStartProducer(String lazyStartProducer) {
             doSetProperty("lazyStartProducer", lazyStartProducer);
             return this;
         }
         /**
-         * The operation to perform.
+         * The operation to perform. You can configure a default operation on
+         * the component level, or the operation as part of the endpoint, or via
+         * a message header with the key CamelAwsIAMOperation.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.aws2.iam.IAM2Operations</code> type.
+         * &lt;code&gt;org.apache.camel.component.aws2.iam.IAM2Operations&lt;/code&gt; type.
          * 
-         * Required: true
          * Group: producer
+         * 
+         * @param operation the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder operation(IAM2Operations operation) {
             doSetProperty("operation", operation);
             return this;
         }
         /**
-         * The operation to perform.
+         * The operation to perform. You can configure a default operation on
+         * the component level, or the operation as part of the endpoint, or via
+         * a message header with the key CamelAwsIAMOperation.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.aws2.iam.IAM2Operations</code> type.
+         * &lt;code&gt;org.apache.camel.component.aws2.iam.IAM2Operations&lt;/code&gt; type.
          * 
-         * Required: true
          * Group: producer
+         * 
+         * @param operation the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder operation(String operation) {
             doSetProperty("operation", operation);
@@ -131,10 +152,13 @@ public interface IAM2EndpointBuilderFactory {
         /**
          * If we want to use a POJO request as body or not.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: producer
+         * 
+         * @param pojoRequest the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder pojoRequest(boolean pojoRequest) {
             doSetProperty("pojoRequest", pojoRequest);
@@ -143,10 +167,14 @@ public interface IAM2EndpointBuilderFactory {
         /**
          * If we want to use a POJO request as body or not.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: producer
+         * 
+         * @param pojoRequest the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder pojoRequest(String pojoRequest) {
             doSetProperty("pojoRequest", pojoRequest);
@@ -155,9 +183,12 @@ public interface IAM2EndpointBuilderFactory {
         /**
          * To define a proxy host when instantiating the IAM client.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: producer
+         * 
+         * @param proxyHost the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder proxyHost(String proxyHost) {
             doSetProperty("proxyHost", proxyHost);
@@ -166,9 +197,12 @@ public interface IAM2EndpointBuilderFactory {
         /**
          * To define a proxy port when instantiating the IAM client.
          * 
-         * The option is a: <code>java.lang.Integer</code> type.
+         * The option is a: &lt;code&gt;java.lang.Integer&lt;/code&gt; type.
          * 
          * Group: producer
+         * 
+         * @param proxyPort the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder proxyPort(Integer proxyPort) {
             doSetProperty("proxyPort", proxyPort);
@@ -177,10 +211,13 @@ public interface IAM2EndpointBuilderFactory {
         /**
          * To define a proxy port when instantiating the IAM client.
          * 
-         * The option will be converted to a <code>java.lang.Integer</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Integer&lt;/code&gt; type.
          * 
          * Group: producer
+         * 
+         * @param proxyPort the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder proxyPort(String proxyPort) {
             doSetProperty("proxyPort", proxyPort);
@@ -189,11 +226,14 @@ public interface IAM2EndpointBuilderFactory {
         /**
          * To define a proxy protocol when instantiating the IAM client.
          * 
-         * The option is a: <code>software.amazon.awssdk.core.Protocol</code>
-         * type.
+         * The option is a:
+         * &lt;code&gt;software.amazon.awssdk.core.Protocol&lt;/code&gt; type.
          * 
          * Default: HTTPS
          * Group: producer
+         * 
+         * @param proxyProtocol the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder proxyProtocol(Protocol proxyProtocol) {
             doSetProperty("proxyProtocol", proxyProtocol);
@@ -203,10 +243,13 @@ public interface IAM2EndpointBuilderFactory {
          * To define a proxy protocol when instantiating the IAM client.
          * 
          * The option will be converted to a
-         * <code>software.amazon.awssdk.core.Protocol</code> type.
+         * &lt;code&gt;software.amazon.awssdk.core.Protocol&lt;/code&gt; type.
          * 
          * Default: HTTPS
          * Group: producer
+         * 
+         * @param proxyProtocol the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder proxyProtocol(String proxyProtocol) {
             doSetProperty("proxyProtocol", proxyProtocol);
@@ -218,10 +261,13 @@ public interface IAM2EndpointBuilderFactory {
          * region (for example ap-east-1) You'll need to use the name
          * Region.EU_WEST_1.id().
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Default: aws-global
          * Group: producer
+         * 
+         * @param region the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder region(String region) {
             doSetProperty("region", region);
@@ -231,10 +277,13 @@ public interface IAM2EndpointBuilderFactory {
          * If we want to trust all certificates in case of overriding the
          * endpoint.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: producer
+         * 
+         * @param trustAllCertificates the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder trustAllCertificates(
                 boolean trustAllCertificates) {
@@ -245,10 +294,14 @@ public interface IAM2EndpointBuilderFactory {
          * If we want to trust all certificates in case of overriding the
          * endpoint.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: producer
+         * 
+         * @param trustAllCertificates the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder trustAllCertificates(
                 String trustAllCertificates) {
@@ -258,9 +311,12 @@ public interface IAM2EndpointBuilderFactory {
         /**
          * Amazon AWS Access Key.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: security
+         * 
+         * @param accessKey the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder accessKey(String accessKey) {
             doSetProperty("accessKey", accessKey);
@@ -269,9 +325,12 @@ public interface IAM2EndpointBuilderFactory {
         /**
          * Amazon AWS Secret Key.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: security
+         * 
+         * @param secretKey the value to set
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder secretKey(String secretKey) {
             doSetProperty("secretKey", secretKey);
@@ -293,10 +352,13 @@ public interface IAM2EndpointBuilderFactory {
          * Sets whether synchronous processing should be strictly used, or Camel
          * is allowed to use asynchronous processing (if supported).
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: advanced
+         * 
+         * @param synchronous the value to set
+         * @return the dsl builder
          */
         default AdvancedIAM2EndpointBuilder synchronous(boolean synchronous) {
             doSetProperty("synchronous", synchronous);
@@ -306,10 +368,14 @@ public interface IAM2EndpointBuilderFactory {
          * Sets whether synchronous processing should be strictly used, or Camel
          * is allowed to use asynchronous processing (if supported).
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: advanced
+         * 
+         * @param synchronous the value to set
+         * @return the dsl builder
          */
         default AdvancedIAM2EndpointBuilder synchronous(String synchronous) {
             doSetProperty("synchronous", synchronous);
@@ -360,6 +426,7 @@ public interface IAM2EndpointBuilderFactory {
          * Logical name
          * 
          * @param path label
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder aws2Iam(String path) {
             return IAM2EndpointBuilderFactory.endpointBuilder("aws2-iam", path);
@@ -380,6 +447,7 @@ public interface IAM2EndpointBuilderFactory {
          * @param componentName to use a custom component name for the endpoint
          * instead of the default name
          * @param path label
+         * @return the dsl builder
          */
         default IAM2EndpointBuilder aws2Iam(String componentName, String path) {
             return IAM2EndpointBuilderFactory.endpointBuilder(componentName, path);

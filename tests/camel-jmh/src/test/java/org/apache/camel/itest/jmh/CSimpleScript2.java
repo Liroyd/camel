@@ -25,8 +25,7 @@ import static org.apache.camel.language.csimple.CSimpleHelper.headerAs;
 
 public class CSimpleScript2 extends CSimpleSupport {
 
-    public CSimpleScript2(CamelContext context) {
-        init(context);
+    public CSimpleScript2() {
     }
 
     @Override
@@ -38,6 +37,11 @@ public class CSimpleScript2 extends CSimpleSupport {
     public Object evaluate(CamelContext context, Exchange exchange, Message message, Object body)
             throws Exception {
         return headerAs(message, "gold", int.class) > 123;
+    }
+
+    @Override
+    public boolean isPredicate() {
+        return true;
     }
 
 }

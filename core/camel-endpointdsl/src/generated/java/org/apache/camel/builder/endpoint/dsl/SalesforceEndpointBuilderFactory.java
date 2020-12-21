@@ -45,9 +45,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * APEX method name.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param apexMethod the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder apexMethod(String apexMethod) {
             doSetProperty("apexMethod", apexMethod);
@@ -56,10 +59,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Query params for APEX method.
          * 
-         * The option is a: <code>java.util.Map&lt;java.lang.String,
-         * java.lang.Object&gt;</code> type.
+         * The option is a: &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Object&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param apexQueryParams the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder apexQueryParams(
                 Map<String, Object> apexQueryParams) {
@@ -70,10 +76,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Query params for APEX method.
          * 
          * The option will be converted to a
-         * <code>java.util.Map&lt;java.lang.String, java.lang.Object&gt;</code>
-         * type.
+         * &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Object&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param apexQueryParams the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder apexQueryParams(
                 String apexQueryParams) {
@@ -81,23 +90,15 @@ public interface SalesforceEndpointBuilderFactory {
             return this;
         }
         /**
-         * APEX method URL.
-         * 
-         * The option is a: <code>java.lang.String</code> type.
-         * 
-         * Group: common
-         */
-        default SalesforceEndpointConsumerBuilder apexUrl(String apexUrl) {
-            doSetProperty("apexUrl", apexUrl);
-            return this;
-        }
-        /**
          * Salesforce API version.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Default: 50.0
          * Group: common
+         * 
+         * @param apiVersion the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder apiVersion(String apiVersion) {
             doSetProperty("apiVersion", apiVersion);
@@ -107,10 +108,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Backoff interval increment for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option is a: <code>long</code> type.
+         * The option is a: &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 1000
          * Group: common
+         * 
+         * @param backoffIncrement the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder backoffIncrement(
                 long backoffIncrement) {
@@ -121,10 +125,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Backoff interval increment for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option will be converted to a <code>long</code> type.
+         * The option will be converted to a &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 1000
          * Group: common
+         * 
+         * @param backoffIncrement the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder backoffIncrement(
                 String backoffIncrement) {
@@ -134,9 +141,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Bulk API Batch ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param batchId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder batchId(String batchId) {
             doSetProperty("batchId", batchId);
@@ -146,9 +156,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Bulk API content type, one of XML, CSV, ZIP_XML, ZIP_CSV.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.api.dto.bulk.ContentType</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.bulk.ContentType&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param contentType the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder contentType(
                 ContentType contentType) {
@@ -159,9 +172,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Bulk API content type, one of XML, CSV, ZIP_XML, ZIP_CSV.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.api.dto.bulk.ContentType</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.bulk.ContentType&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param contentType the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder contentType(String contentType) {
             doSetProperty("contentType", contentType);
@@ -170,10 +186,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Default replayId setting if no value is found in initialReplayIdMap.
          * 
-         * The option is a: <code>java.lang.Long</code> type.
+         * The option is a: &lt;code&gt;java.lang.Long&lt;/code&gt; type.
          * 
          * Default: -1
          * Group: common
+         * 
+         * @param defaultReplayId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder defaultReplayId(
                 Long defaultReplayId) {
@@ -183,10 +202,14 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Default replayId setting if no value is found in initialReplayIdMap.
          * 
-         * The option will be converted to a <code>java.lang.Long</code> type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Long&lt;/code&gt; type.
          * 
          * Default: -1
          * Group: common
+         * 
+         * @param defaultReplayId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder defaultReplayId(
                 String defaultReplayId) {
@@ -198,9 +221,12 @@ public interface SalesforceEndpointBuilderFactory {
          * defaults to JSON.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.internal.PayloadFormat</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.PayloadFormat&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param format the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder format(PayloadFormat format) {
             doSetProperty("format", format);
@@ -211,9 +237,12 @@ public interface SalesforceEndpointBuilderFactory {
          * defaults to JSON.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.internal.PayloadFormat</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.PayloadFormat&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param format the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder format(String format) {
             doSetProperty("format", format);
@@ -223,9 +252,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Custom Jetty Http Client to use to connect to Salesforce.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.SalesforceHttpClient</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.SalesforceHttpClient&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param httpClient the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder httpClient(Object httpClient) {
             doSetProperty("httpClient", httpClient);
@@ -235,9 +267,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Custom Jetty Http Client to use to connect to Salesforce.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.SalesforceHttpClient</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.SalesforceHttpClient&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param httpClient the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder httpClient(String httpClient) {
             doSetProperty("httpClient", httpClient);
@@ -246,9 +281,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Include details in Salesforce1 Analytics report, defaults to false.
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param includeDetails the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder includeDetails(
                 Boolean includeDetails) {
@@ -258,10 +296,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Include details in Salesforce1 Analytics report, defaults to false.
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param includeDetails the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder includeDetails(
                 String includeDetails) {
@@ -271,10 +312,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Replay IDs to start from per channel name.
          * 
-         * The option is a: <code>java.util.Map&lt;java.lang.String,
-         * java.lang.Long&gt;</code> type.
+         * The option is a: &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Long&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param initialReplayIdMap the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder initialReplayIdMap(
                 Map<String, Long> initialReplayIdMap) {
@@ -285,10 +329,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Replay IDs to start from per channel name.
          * 
          * The option will be converted to a
-         * <code>java.util.Map&lt;java.lang.String, java.lang.Long&gt;</code>
-         * type.
+         * &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Long&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param initialReplayIdMap the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder initialReplayIdMap(
                 String initialReplayIdMap) {
@@ -298,9 +345,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce1 Analytics report execution instance ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param instanceId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder instanceId(String instanceId) {
             doSetProperty("instanceId", instanceId);
@@ -309,9 +359,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Bulk API Job ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param jobId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder jobId(String jobId) {
             doSetProperty("jobId", jobId);
@@ -321,9 +374,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Limit on number of returned records. Applicable to some of the API,
          * check the Salesforce documentation.
          * 
-         * The option is a: <code>java.lang.Integer</code> type.
+         * The option is a: &lt;code&gt;java.lang.Integer&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param limit the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder limit(Integer limit) {
             doSetProperty("limit", limit);
@@ -333,10 +389,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Limit on number of returned records. Applicable to some of the API,
          * check the Salesforce documentation.
          * 
-         * The option will be converted to a <code>java.lang.Integer</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Integer&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param limit the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder limit(String limit) {
             doSetProperty("limit", limit);
@@ -346,10 +405,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Maximum backoff interval for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option is a: <code>long</code> type.
+         * The option is a: &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 30000
          * Group: common
+         * 
+         * @param maxBackoff the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder maxBackoff(long maxBackoff) {
             doSetProperty("maxBackoff", maxBackoff);
@@ -359,10 +421,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Maximum backoff interval for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option will be converted to a <code>long</code> type.
+         * The option will be converted to a &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 30000
          * Group: common
+         * 
+         * @param maxBackoff the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder maxBackoff(String maxBackoff) {
             doSetProperty("maxBackoff", maxBackoff);
@@ -375,11 +440,13 @@ public interface SalesforceEndpointBuilderFactory {
          * the default.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.NotFoundBehaviour</code>
-         * type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.NotFoundBehaviour&lt;/code&gt; type.
          * 
          * Default: EXCEPTION
          * Group: common
+         * 
+         * @param notFoundBehaviour the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notFoundBehaviour(
                 NotFoundBehaviour notFoundBehaviour) {
@@ -393,11 +460,13 @@ public interface SalesforceEndpointBuilderFactory {
          * the default.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.NotFoundBehaviour</code>
-         * type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.NotFoundBehaviour&lt;/code&gt; type.
          * 
          * Default: EXCEPTION
          * Group: common
+         * 
+         * @param notFoundBehaviour the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notFoundBehaviour(
                 String notFoundBehaviour) {
@@ -408,9 +477,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for fields, options are ALL, REFERENCED, SELECT, WHERE.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForFields the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForFields(
                 NotifyForFieldsEnum notifyForFields) {
@@ -421,9 +493,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for fields, options are ALL, REFERENCED, SELECT, WHERE.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForFields the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForFields(
                 String notifyForFields) {
@@ -433,9 +508,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for create operation, defaults to false (API version = 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationCreate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForOperationCreate(
                 Boolean notifyForOperationCreate) {
@@ -445,10 +523,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for create operation, defaults to false (API version = 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationCreate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForOperationCreate(
                 String notifyForOperationCreate) {
@@ -458,9 +539,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for delete operation, defaults to false (API version = 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationDelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForOperationDelete(
                 Boolean notifyForOperationDelete) {
@@ -470,10 +554,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for delete operation, defaults to false (API version = 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationDelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForOperationDelete(
                 String notifyForOperationDelete) {
@@ -485,9 +572,12 @@ public interface SalesforceEndpointBuilderFactory {
          * version 29.0).
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperations the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForOperations(
                 NotifyForOperationsEnum notifyForOperations) {
@@ -499,9 +589,12 @@ public interface SalesforceEndpointBuilderFactory {
          * version 29.0).
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperations the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForOperations(
                 String notifyForOperations) {
@@ -512,9 +605,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for un-delete operation, defaults to false (API version =
          * 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUndelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForOperationUndelete(
                 Boolean notifyForOperationUndelete) {
@@ -525,10 +621,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for un-delete operation, defaults to false (API version =
          * 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUndelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForOperationUndelete(
                 String notifyForOperationUndelete) {
@@ -538,9 +637,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for update operation, defaults to false (API version = 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUpdate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForOperationUpdate(
                 Boolean notifyForOperationUpdate) {
@@ -550,10 +652,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for update operation, defaults to false (API version = 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUpdate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder notifyForOperationUpdate(
                 String notifyForOperationUpdate) {
@@ -565,9 +670,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce objects.
          * 
          * The option is a:
-         * <code>com.fasterxml.jackson.databind.ObjectMapper</code> type.
+         * &lt;code&gt;com.fasterxml.jackson.databind.ObjectMapper&lt;/code&gt;
+         * type.
          * 
          * Group: common
+         * 
+         * @param objectMapper the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder objectMapper(
                 Object objectMapper) {
@@ -579,9 +688,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce objects.
          * 
          * The option will be converted to a
-         * <code>com.fasterxml.jackson.databind.ObjectMapper</code> type.
+         * &lt;code&gt;com.fasterxml.jackson.databind.ObjectMapper&lt;/code&gt;
+         * type.
          * 
          * Group: common
+         * 
+         * @param objectMapper the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder objectMapper(
                 String objectMapper) {
@@ -592,10 +705,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Use raw payload String for request and response (either JSON or XML
          * depending on format), instead of DTOs, false by default.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param rawPayload the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder rawPayload(boolean rawPayload) {
             doSetProperty("rawPayload", rawPayload);
@@ -605,10 +721,14 @@ public interface SalesforceEndpointBuilderFactory {
          * Use raw payload String for request and response (either JSON or XML
          * depending on format), instead of DTOs, false by default.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param rawPayload the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder rawPayload(String rawPayload) {
             doSetProperty("rawPayload", rawPayload);
@@ -617,9 +737,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce1 Analytics report Id.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param reportId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder reportId(String reportId) {
             doSetProperty("reportId", reportId);
@@ -629,9 +752,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce1 Analytics report metadata for filtering.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param reportMetadata the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder reportMetadata(
                 Object reportMetadata) {
@@ -642,9 +768,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce1 Analytics report metadata for filtering.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param reportMetadata the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder reportMetadata(
                 String reportMetadata) {
@@ -654,9 +783,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Bulk API Result ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param resultId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder resultId(String resultId) {
             doSetProperty("resultId", resultId);
@@ -665,9 +797,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject blob field name.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectBlobFieldName the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder sObjectBlobFieldName(
                 String sObjectBlobFieldName) {
@@ -678,9 +813,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Fully qualified SObject class name, usually generated using
          * camel-salesforce-maven-plugin.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectClass the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder sObjectClass(
                 String sObjectClass) {
@@ -690,9 +828,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject fields to retrieve.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectFields the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder sObjectFields(
                 String sObjectFields) {
@@ -702,9 +843,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject ID if required by API.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder sObjectId(String sObjectId) {
             doSetProperty("sObjectId", sObjectId);
@@ -713,9 +857,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject external ID field name.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectIdName the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder sObjectIdName(
                 String sObjectIdName) {
@@ -725,9 +872,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject external ID field value.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectIdValue the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder sObjectIdValue(
                 String sObjectIdValue) {
@@ -737,9 +887,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject name if required or supported by API.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectName the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder sObjectName(String sObjectName) {
             doSetProperty("sObjectName", sObjectName);
@@ -748,9 +901,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce SOQL query string.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectQuery the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder sObjectQuery(
                 String sObjectQuery) {
@@ -760,9 +916,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce SOSL search string.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectSearch the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder sObjectSearch(
                 String sObjectSearch) {
@@ -773,10 +932,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Whether to update an existing Push Topic when using the Streaming
          * API, defaults to false.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param updateTopic the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder updateTopic(
                 boolean updateTopic) {
@@ -787,10 +949,14 @@ public interface SalesforceEndpointBuilderFactory {
          * Whether to update an existing Push Topic when using the Streaming
          * API, defaults to false.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param updateTopic the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder updateTopic(String updateTopic) {
             doSetProperty("updateTopic", updateTopic);
@@ -805,10 +971,13 @@ public interface SalesforceEndpointBuilderFactory {
          * with exceptions, that will be logged at WARN or ERROR level and
          * ignored.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: consumer
+         * 
+         * @param bridgeErrorHandler the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder bridgeErrorHandler(
                 boolean bridgeErrorHandler) {
@@ -824,10 +993,14 @@ public interface SalesforceEndpointBuilderFactory {
          * with exceptions, that will be logged at WARN or ERROR level and
          * ignored.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: consumer
+         * 
+         * @param bridgeErrorHandler the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder bridgeErrorHandler(
                 String bridgeErrorHandler) {
@@ -837,9 +1010,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * The replayId value to use when subscribing.
          * 
-         * The option is a: <code>java.lang.Long</code> type.
+         * The option is a: &lt;code&gt;java.lang.Long&lt;/code&gt; type.
          * 
          * Group: consumer
+         * 
+         * @param replayId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder replayId(Long replayId) {
             doSetProperty("replayId", replayId);
@@ -848,9 +1024,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * The replayId value to use when subscribing.
          * 
-         * The option will be converted to a <code>java.lang.Long</code> type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Long&lt;/code&gt; type.
          * 
          * Group: consumer
+         * 
+         * @param replayId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointConsumerBuilder replayId(String replayId) {
             doSetProperty("replayId", replayId);
@@ -873,10 +1053,13 @@ public interface SalesforceEndpointBuilderFactory {
          * By default the consumer will deal with exceptions, that will be
          * logged at WARN or ERROR level and ignored.
          * 
-         * The option is a: <code>org.apache.camel.spi.ExceptionHandler</code>
-         * type.
+         * The option is a:
+         * &lt;code&gt;org.apache.camel.spi.ExceptionHandler&lt;/code&gt; type.
          * 
          * Group: consumer (advanced)
+         * 
+         * @param exceptionHandler the value to set
+         * @return the dsl builder
          */
         default AdvancedSalesforceEndpointConsumerBuilder exceptionHandler(
                 ExceptionHandler exceptionHandler) {
@@ -890,9 +1073,12 @@ public interface SalesforceEndpointBuilderFactory {
          * logged at WARN or ERROR level and ignored.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.spi.ExceptionHandler</code> type.
+         * &lt;code&gt;org.apache.camel.spi.ExceptionHandler&lt;/code&gt; type.
          * 
          * Group: consumer (advanced)
+         * 
+         * @param exceptionHandler the value to set
+         * @return the dsl builder
          */
         default AdvancedSalesforceEndpointConsumerBuilder exceptionHandler(
                 String exceptionHandler) {
@@ -902,9 +1088,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Sets the exchange pattern when the consumer creates an exchange.
          * 
-         * The option is a: <code>org.apache.camel.ExchangePattern</code> type.
+         * The option is a:
+         * &lt;code&gt;org.apache.camel.ExchangePattern&lt;/code&gt; type.
          * 
          * Group: consumer (advanced)
+         * 
+         * @param exchangePattern the value to set
+         * @return the dsl builder
          */
         default AdvancedSalesforceEndpointConsumerBuilder exchangePattern(
                 ExchangePattern exchangePattern) {
@@ -915,9 +1105,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Sets the exchange pattern when the consumer creates an exchange.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.ExchangePattern</code> type.
+         * &lt;code&gt;org.apache.camel.ExchangePattern&lt;/code&gt; type.
          * 
          * Group: consumer (advanced)
+         * 
+         * @param exchangePattern the value to set
+         * @return the dsl builder
          */
         default AdvancedSalesforceEndpointConsumerBuilder exchangePattern(
                 String exchangePattern) {
@@ -928,10 +1121,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Sets whether synchronous processing should be strictly used, or Camel
          * is allowed to use asynchronous processing (if supported).
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: advanced
+         * 
+         * @param synchronous the value to set
+         * @return the dsl builder
          */
         default AdvancedSalesforceEndpointConsumerBuilder synchronous(
                 boolean synchronous) {
@@ -942,10 +1138,14 @@ public interface SalesforceEndpointBuilderFactory {
          * Sets whether synchronous processing should be strictly used, or Camel
          * is allowed to use asynchronous processing (if supported).
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: advanced
+         * 
+         * @param synchronous the value to set
+         * @return the dsl builder
          */
         default AdvancedSalesforceEndpointConsumerBuilder synchronous(
                 String synchronous) {
@@ -966,9 +1166,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * APEX method name.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param apexMethod the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder apexMethod(String apexMethod) {
             doSetProperty("apexMethod", apexMethod);
@@ -977,10 +1180,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Query params for APEX method.
          * 
-         * The option is a: <code>java.util.Map&lt;java.lang.String,
-         * java.lang.Object&gt;</code> type.
+         * The option is a: &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Object&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param apexQueryParams the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder apexQueryParams(
                 Map<String, Object> apexQueryParams) {
@@ -991,10 +1197,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Query params for APEX method.
          * 
          * The option will be converted to a
-         * <code>java.util.Map&lt;java.lang.String, java.lang.Object&gt;</code>
-         * type.
+         * &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Object&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param apexQueryParams the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder apexQueryParams(
                 String apexQueryParams) {
@@ -1002,23 +1211,15 @@ public interface SalesforceEndpointBuilderFactory {
             return this;
         }
         /**
-         * APEX method URL.
-         * 
-         * The option is a: <code>java.lang.String</code> type.
-         * 
-         * Group: common
-         */
-        default SalesforceEndpointProducerBuilder apexUrl(String apexUrl) {
-            doSetProperty("apexUrl", apexUrl);
-            return this;
-        }
-        /**
          * Salesforce API version.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Default: 50.0
          * Group: common
+         * 
+         * @param apiVersion the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder apiVersion(String apiVersion) {
             doSetProperty("apiVersion", apiVersion);
@@ -1028,10 +1229,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Backoff interval increment for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option is a: <code>long</code> type.
+         * The option is a: &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 1000
          * Group: common
+         * 
+         * @param backoffIncrement the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder backoffIncrement(
                 long backoffIncrement) {
@@ -1042,10 +1246,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Backoff interval increment for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option will be converted to a <code>long</code> type.
+         * The option will be converted to a &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 1000
          * Group: common
+         * 
+         * @param backoffIncrement the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder backoffIncrement(
                 String backoffIncrement) {
@@ -1055,9 +1262,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Bulk API Batch ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param batchId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder batchId(String batchId) {
             doSetProperty("batchId", batchId);
@@ -1067,9 +1277,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Bulk API content type, one of XML, CSV, ZIP_XML, ZIP_CSV.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.api.dto.bulk.ContentType</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.bulk.ContentType&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param contentType the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder contentType(
                 ContentType contentType) {
@@ -1080,9 +1293,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Bulk API content type, one of XML, CSV, ZIP_XML, ZIP_CSV.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.api.dto.bulk.ContentType</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.bulk.ContentType&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param contentType the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder contentType(String contentType) {
             doSetProperty("contentType", contentType);
@@ -1091,10 +1307,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Default replayId setting if no value is found in initialReplayIdMap.
          * 
-         * The option is a: <code>java.lang.Long</code> type.
+         * The option is a: &lt;code&gt;java.lang.Long&lt;/code&gt; type.
          * 
          * Default: -1
          * Group: common
+         * 
+         * @param defaultReplayId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder defaultReplayId(
                 Long defaultReplayId) {
@@ -1104,10 +1323,14 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Default replayId setting if no value is found in initialReplayIdMap.
          * 
-         * The option will be converted to a <code>java.lang.Long</code> type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Long&lt;/code&gt; type.
          * 
          * Default: -1
          * Group: common
+         * 
+         * @param defaultReplayId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder defaultReplayId(
                 String defaultReplayId) {
@@ -1119,9 +1342,12 @@ public interface SalesforceEndpointBuilderFactory {
          * defaults to JSON.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.internal.PayloadFormat</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.PayloadFormat&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param format the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder format(PayloadFormat format) {
             doSetProperty("format", format);
@@ -1132,9 +1358,12 @@ public interface SalesforceEndpointBuilderFactory {
          * defaults to JSON.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.internal.PayloadFormat</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.PayloadFormat&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param format the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder format(String format) {
             doSetProperty("format", format);
@@ -1144,9 +1373,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Custom Jetty Http Client to use to connect to Salesforce.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.SalesforceHttpClient</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.SalesforceHttpClient&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param httpClient the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder httpClient(Object httpClient) {
             doSetProperty("httpClient", httpClient);
@@ -1156,9 +1388,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Custom Jetty Http Client to use to connect to Salesforce.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.SalesforceHttpClient</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.SalesforceHttpClient&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param httpClient the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder httpClient(String httpClient) {
             doSetProperty("httpClient", httpClient);
@@ -1167,9 +1402,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Include details in Salesforce1 Analytics report, defaults to false.
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param includeDetails the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder includeDetails(
                 Boolean includeDetails) {
@@ -1179,10 +1417,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Include details in Salesforce1 Analytics report, defaults to false.
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param includeDetails the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder includeDetails(
                 String includeDetails) {
@@ -1192,10 +1433,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Replay IDs to start from per channel name.
          * 
-         * The option is a: <code>java.util.Map&lt;java.lang.String,
-         * java.lang.Long&gt;</code> type.
+         * The option is a: &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Long&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param initialReplayIdMap the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder initialReplayIdMap(
                 Map<String, Long> initialReplayIdMap) {
@@ -1206,10 +1450,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Replay IDs to start from per channel name.
          * 
          * The option will be converted to a
-         * <code>java.util.Map&lt;java.lang.String, java.lang.Long&gt;</code>
-         * type.
+         * &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Long&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param initialReplayIdMap the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder initialReplayIdMap(
                 String initialReplayIdMap) {
@@ -1219,9 +1466,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce1 Analytics report execution instance ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param instanceId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder instanceId(String instanceId) {
             doSetProperty("instanceId", instanceId);
@@ -1230,9 +1480,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Bulk API Job ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param jobId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder jobId(String jobId) {
             doSetProperty("jobId", jobId);
@@ -1242,9 +1495,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Limit on number of returned records. Applicable to some of the API,
          * check the Salesforce documentation.
          * 
-         * The option is a: <code>java.lang.Integer</code> type.
+         * The option is a: &lt;code&gt;java.lang.Integer&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param limit the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder limit(Integer limit) {
             doSetProperty("limit", limit);
@@ -1254,10 +1510,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Limit on number of returned records. Applicable to some of the API,
          * check the Salesforce documentation.
          * 
-         * The option will be converted to a <code>java.lang.Integer</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Integer&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param limit the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder limit(String limit) {
             doSetProperty("limit", limit);
@@ -1267,10 +1526,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Maximum backoff interval for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option is a: <code>long</code> type.
+         * The option is a: &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 30000
          * Group: common
+         * 
+         * @param maxBackoff the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder maxBackoff(long maxBackoff) {
             doSetProperty("maxBackoff", maxBackoff);
@@ -1280,10 +1542,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Maximum backoff interval for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option will be converted to a <code>long</code> type.
+         * The option will be converted to a &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 30000
          * Group: common
+         * 
+         * @param maxBackoff the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder maxBackoff(String maxBackoff) {
             doSetProperty("maxBackoff", maxBackoff);
@@ -1296,11 +1561,13 @@ public interface SalesforceEndpointBuilderFactory {
          * the default.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.NotFoundBehaviour</code>
-         * type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.NotFoundBehaviour&lt;/code&gt; type.
          * 
          * Default: EXCEPTION
          * Group: common
+         * 
+         * @param notFoundBehaviour the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notFoundBehaviour(
                 NotFoundBehaviour notFoundBehaviour) {
@@ -1314,11 +1581,13 @@ public interface SalesforceEndpointBuilderFactory {
          * the default.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.NotFoundBehaviour</code>
-         * type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.NotFoundBehaviour&lt;/code&gt; type.
          * 
          * Default: EXCEPTION
          * Group: common
+         * 
+         * @param notFoundBehaviour the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notFoundBehaviour(
                 String notFoundBehaviour) {
@@ -1329,9 +1598,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for fields, options are ALL, REFERENCED, SELECT, WHERE.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForFields the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForFields(
                 NotifyForFieldsEnum notifyForFields) {
@@ -1342,9 +1614,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for fields, options are ALL, REFERENCED, SELECT, WHERE.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForFields the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForFields(
                 String notifyForFields) {
@@ -1354,9 +1629,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for create operation, defaults to false (API version = 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationCreate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForOperationCreate(
                 Boolean notifyForOperationCreate) {
@@ -1366,10 +1644,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for create operation, defaults to false (API version = 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationCreate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForOperationCreate(
                 String notifyForOperationCreate) {
@@ -1379,9 +1660,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for delete operation, defaults to false (API version = 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationDelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForOperationDelete(
                 Boolean notifyForOperationDelete) {
@@ -1391,10 +1675,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for delete operation, defaults to false (API version = 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationDelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForOperationDelete(
                 String notifyForOperationDelete) {
@@ -1406,9 +1693,12 @@ public interface SalesforceEndpointBuilderFactory {
          * version 29.0).
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperations the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForOperations(
                 NotifyForOperationsEnum notifyForOperations) {
@@ -1420,9 +1710,12 @@ public interface SalesforceEndpointBuilderFactory {
          * version 29.0).
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperations the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForOperations(
                 String notifyForOperations) {
@@ -1433,9 +1726,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for un-delete operation, defaults to false (API version =
          * 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUndelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForOperationUndelete(
                 Boolean notifyForOperationUndelete) {
@@ -1446,10 +1742,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for un-delete operation, defaults to false (API version =
          * 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUndelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForOperationUndelete(
                 String notifyForOperationUndelete) {
@@ -1459,9 +1758,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for update operation, defaults to false (API version = 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUpdate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForOperationUpdate(
                 Boolean notifyForOperationUpdate) {
@@ -1471,10 +1773,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for update operation, defaults to false (API version = 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUpdate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder notifyForOperationUpdate(
                 String notifyForOperationUpdate) {
@@ -1486,9 +1791,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce objects.
          * 
          * The option is a:
-         * <code>com.fasterxml.jackson.databind.ObjectMapper</code> type.
+         * &lt;code&gt;com.fasterxml.jackson.databind.ObjectMapper&lt;/code&gt;
+         * type.
          * 
          * Group: common
+         * 
+         * @param objectMapper the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder objectMapper(
                 Object objectMapper) {
@@ -1500,9 +1809,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce objects.
          * 
          * The option will be converted to a
-         * <code>com.fasterxml.jackson.databind.ObjectMapper</code> type.
+         * &lt;code&gt;com.fasterxml.jackson.databind.ObjectMapper&lt;/code&gt;
+         * type.
          * 
          * Group: common
+         * 
+         * @param objectMapper the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder objectMapper(
                 String objectMapper) {
@@ -1513,10 +1826,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Use raw payload String for request and response (either JSON or XML
          * depending on format), instead of DTOs, false by default.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param rawPayload the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder rawPayload(boolean rawPayload) {
             doSetProperty("rawPayload", rawPayload);
@@ -1526,10 +1842,14 @@ public interface SalesforceEndpointBuilderFactory {
          * Use raw payload String for request and response (either JSON or XML
          * depending on format), instead of DTOs, false by default.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param rawPayload the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder rawPayload(String rawPayload) {
             doSetProperty("rawPayload", rawPayload);
@@ -1538,9 +1858,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce1 Analytics report Id.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param reportId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder reportId(String reportId) {
             doSetProperty("reportId", reportId);
@@ -1550,9 +1873,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce1 Analytics report metadata for filtering.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param reportMetadata the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder reportMetadata(
                 Object reportMetadata) {
@@ -1563,9 +1889,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce1 Analytics report metadata for filtering.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param reportMetadata the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder reportMetadata(
                 String reportMetadata) {
@@ -1575,9 +1904,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Bulk API Result ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param resultId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder resultId(String resultId) {
             doSetProperty("resultId", resultId);
@@ -1586,9 +1918,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject blob field name.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectBlobFieldName the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder sObjectBlobFieldName(
                 String sObjectBlobFieldName) {
@@ -1599,9 +1934,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Fully qualified SObject class name, usually generated using
          * camel-salesforce-maven-plugin.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectClass the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder sObjectClass(
                 String sObjectClass) {
@@ -1611,9 +1949,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject fields to retrieve.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectFields the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder sObjectFields(
                 String sObjectFields) {
@@ -1623,9 +1964,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject ID if required by API.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder sObjectId(String sObjectId) {
             doSetProperty("sObjectId", sObjectId);
@@ -1634,9 +1978,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject external ID field name.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectIdName the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder sObjectIdName(
                 String sObjectIdName) {
@@ -1646,9 +1993,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject external ID field value.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectIdValue the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder sObjectIdValue(
                 String sObjectIdValue) {
@@ -1658,9 +2008,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject name if required or supported by API.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectName the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder sObjectName(String sObjectName) {
             doSetProperty("sObjectName", sObjectName);
@@ -1669,9 +2022,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce SOQL query string.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectQuery the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder sObjectQuery(
                 String sObjectQuery) {
@@ -1681,9 +2037,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce SOSL search string.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectSearch the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder sObjectSearch(
                 String sObjectSearch) {
@@ -1694,10 +2053,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Whether to update an existing Push Topic when using the Streaming
          * API, defaults to false.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param updateTopic the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder updateTopic(
                 boolean updateTopic) {
@@ -1708,13 +2070,46 @@ public interface SalesforceEndpointBuilderFactory {
          * Whether to update an existing Push Topic when using the Streaming
          * API, defaults to false.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param updateTopic the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder updateTopic(String updateTopic) {
             doSetProperty("updateTopic", updateTopic);
+            return this;
+        }
+        /**
+         * APEX method URL.
+         * 
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
+         * 
+         * Group: producer
+         * 
+         * @param apexUrl the value to set
+         * @return the dsl builder
+         */
+        default SalesforceEndpointProducerBuilder apexUrl(String apexUrl) {
+            doSetProperty("apexUrl", apexUrl);
+            return this;
+        }
+        /**
+         * Composite (raw) method.
+         * 
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
+         * 
+         * Group: producer
+         * 
+         * @param compositeMethod the value to set
+         * @return the dsl builder
+         */
+        default SalesforceEndpointProducerBuilder compositeMethod(
+                String compositeMethod) {
+            doSetProperty("compositeMethod", compositeMethod);
             return this;
         }
         /**
@@ -1728,10 +2123,13 @@ public interface SalesforceEndpointBuilderFactory {
          * producer may take a little time and prolong the total processing time
          * of the processing.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: producer
+         * 
+         * @param lazyStartProducer the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder lazyStartProducer(
                 boolean lazyStartProducer) {
@@ -1749,10 +2147,14 @@ public interface SalesforceEndpointBuilderFactory {
          * producer may take a little time and prolong the total processing time
          * of the processing.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: producer
+         * 
+         * @param lazyStartProducer the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointProducerBuilder lazyStartProducer(
                 String lazyStartProducer) {
@@ -1774,10 +2176,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Sets whether synchronous processing should be strictly used, or Camel
          * is allowed to use asynchronous processing (if supported).
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: advanced
+         * 
+         * @param synchronous the value to set
+         * @return the dsl builder
          */
         default AdvancedSalesforceEndpointProducerBuilder synchronous(
                 boolean synchronous) {
@@ -1788,10 +2193,14 @@ public interface SalesforceEndpointBuilderFactory {
          * Sets whether synchronous processing should be strictly used, or Camel
          * is allowed to use asynchronous processing (if supported).
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: advanced
+         * 
+         * @param synchronous the value to set
+         * @return the dsl builder
          */
         default AdvancedSalesforceEndpointProducerBuilder synchronous(
                 String synchronous) {
@@ -1813,9 +2222,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * APEX method name.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param apexMethod the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder apexMethod(String apexMethod) {
             doSetProperty("apexMethod", apexMethod);
@@ -1824,10 +2236,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Query params for APEX method.
          * 
-         * The option is a: <code>java.util.Map&lt;java.lang.String,
-         * java.lang.Object&gt;</code> type.
+         * The option is a: &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Object&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param apexQueryParams the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder apexQueryParams(
                 Map<String, Object> apexQueryParams) {
@@ -1838,33 +2253,28 @@ public interface SalesforceEndpointBuilderFactory {
          * Query params for APEX method.
          * 
          * The option will be converted to a
-         * <code>java.util.Map&lt;java.lang.String, java.lang.Object&gt;</code>
-         * type.
+         * &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Object&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param apexQueryParams the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder apexQueryParams(String apexQueryParams) {
             doSetProperty("apexQueryParams", apexQueryParams);
             return this;
         }
         /**
-         * APEX method URL.
-         * 
-         * The option is a: <code>java.lang.String</code> type.
-         * 
-         * Group: common
-         */
-        default SalesforceEndpointBuilder apexUrl(String apexUrl) {
-            doSetProperty("apexUrl", apexUrl);
-            return this;
-        }
-        /**
          * Salesforce API version.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Default: 50.0
          * Group: common
+         * 
+         * @param apiVersion the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder apiVersion(String apiVersion) {
             doSetProperty("apiVersion", apiVersion);
@@ -1874,10 +2284,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Backoff interval increment for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option is a: <code>long</code> type.
+         * The option is a: &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 1000
          * Group: common
+         * 
+         * @param backoffIncrement the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder backoffIncrement(long backoffIncrement) {
             doSetProperty("backoffIncrement", backoffIncrement);
@@ -1887,10 +2300,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Backoff interval increment for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option will be converted to a <code>long</code> type.
+         * The option will be converted to a &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 1000
          * Group: common
+         * 
+         * @param backoffIncrement the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder backoffIncrement(
                 String backoffIncrement) {
@@ -1900,9 +2316,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Bulk API Batch ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param batchId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder batchId(String batchId) {
             doSetProperty("batchId", batchId);
@@ -1912,9 +2331,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Bulk API content type, one of XML, CSV, ZIP_XML, ZIP_CSV.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.api.dto.bulk.ContentType</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.bulk.ContentType&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param contentType the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder contentType(ContentType contentType) {
             doSetProperty("contentType", contentType);
@@ -1924,9 +2346,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Bulk API content type, one of XML, CSV, ZIP_XML, ZIP_CSV.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.api.dto.bulk.ContentType</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.bulk.ContentType&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param contentType the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder contentType(String contentType) {
             doSetProperty("contentType", contentType);
@@ -1935,10 +2360,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Default replayId setting if no value is found in initialReplayIdMap.
          * 
-         * The option is a: <code>java.lang.Long</code> type.
+         * The option is a: &lt;code&gt;java.lang.Long&lt;/code&gt; type.
          * 
          * Default: -1
          * Group: common
+         * 
+         * @param defaultReplayId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder defaultReplayId(Long defaultReplayId) {
             doSetProperty("defaultReplayId", defaultReplayId);
@@ -1947,10 +2375,14 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Default replayId setting if no value is found in initialReplayIdMap.
          * 
-         * The option will be converted to a <code>java.lang.Long</code> type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Long&lt;/code&gt; type.
          * 
          * Default: -1
          * Group: common
+         * 
+         * @param defaultReplayId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder defaultReplayId(String defaultReplayId) {
             doSetProperty("defaultReplayId", defaultReplayId);
@@ -1961,9 +2393,12 @@ public interface SalesforceEndpointBuilderFactory {
          * defaults to JSON.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.internal.PayloadFormat</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.PayloadFormat&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param format the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder format(PayloadFormat format) {
             doSetProperty("format", format);
@@ -1974,9 +2409,12 @@ public interface SalesforceEndpointBuilderFactory {
          * defaults to JSON.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.internal.PayloadFormat</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.PayloadFormat&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param format the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder format(String format) {
             doSetProperty("format", format);
@@ -1986,9 +2424,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Custom Jetty Http Client to use to connect to Salesforce.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.SalesforceHttpClient</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.SalesforceHttpClient&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param httpClient the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder httpClient(Object httpClient) {
             doSetProperty("httpClient", httpClient);
@@ -1998,9 +2439,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Custom Jetty Http Client to use to connect to Salesforce.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.SalesforceHttpClient</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.SalesforceHttpClient&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param httpClient the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder httpClient(String httpClient) {
             doSetProperty("httpClient", httpClient);
@@ -2009,9 +2453,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Include details in Salesforce1 Analytics report, defaults to false.
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param includeDetails the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder includeDetails(Boolean includeDetails) {
             doSetProperty("includeDetails", includeDetails);
@@ -2020,10 +2467,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Include details in Salesforce1 Analytics report, defaults to false.
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param includeDetails the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder includeDetails(String includeDetails) {
             doSetProperty("includeDetails", includeDetails);
@@ -2032,10 +2482,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Replay IDs to start from per channel name.
          * 
-         * The option is a: <code>java.util.Map&lt;java.lang.String,
-         * java.lang.Long&gt;</code> type.
+         * The option is a: &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Long&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param initialReplayIdMap the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder initialReplayIdMap(
                 Map<String, Long> initialReplayIdMap) {
@@ -2046,10 +2499,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Replay IDs to start from per channel name.
          * 
          * The option will be converted to a
-         * <code>java.util.Map&lt;java.lang.String, java.lang.Long&gt;</code>
-         * type.
+         * &lt;code&gt;java.util.Map&amp;lt;java.lang.String,
+         * java.lang.Long&amp;gt;&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param initialReplayIdMap the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder initialReplayIdMap(
                 String initialReplayIdMap) {
@@ -2059,9 +2515,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce1 Analytics report execution instance ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param instanceId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder instanceId(String instanceId) {
             doSetProperty("instanceId", instanceId);
@@ -2070,9 +2529,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Bulk API Job ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param jobId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder jobId(String jobId) {
             doSetProperty("jobId", jobId);
@@ -2082,9 +2544,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Limit on number of returned records. Applicable to some of the API,
          * check the Salesforce documentation.
          * 
-         * The option is a: <code>java.lang.Integer</code> type.
+         * The option is a: &lt;code&gt;java.lang.Integer&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param limit the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder limit(Integer limit) {
             doSetProperty("limit", limit);
@@ -2094,10 +2559,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Limit on number of returned records. Applicable to some of the API,
          * check the Salesforce documentation.
          * 
-         * The option will be converted to a <code>java.lang.Integer</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Integer&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param limit the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder limit(String limit) {
             doSetProperty("limit", limit);
@@ -2107,10 +2575,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Maximum backoff interval for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option is a: <code>long</code> type.
+         * The option is a: &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 30000
          * Group: common
+         * 
+         * @param maxBackoff the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder maxBackoff(long maxBackoff) {
             doSetProperty("maxBackoff", maxBackoff);
@@ -2120,10 +2591,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Maximum backoff interval for Streaming connection restart attempts
          * for failures beyond CometD auto-reconnect.
          * 
-         * The option will be converted to a <code>long</code> type.
+         * The option will be converted to a &lt;code&gt;long&lt;/code&gt; type.
          * 
          * Default: 30000
          * Group: common
+         * 
+         * @param maxBackoff the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder maxBackoff(String maxBackoff) {
             doSetProperty("maxBackoff", maxBackoff);
@@ -2136,11 +2610,13 @@ public interface SalesforceEndpointBuilderFactory {
          * the default.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.NotFoundBehaviour</code>
-         * type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.NotFoundBehaviour&lt;/code&gt; type.
          * 
          * Default: EXCEPTION
          * Group: common
+         * 
+         * @param notFoundBehaviour the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notFoundBehaviour(
                 NotFoundBehaviour notFoundBehaviour) {
@@ -2154,11 +2630,13 @@ public interface SalesforceEndpointBuilderFactory {
          * the default.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.NotFoundBehaviour</code>
-         * type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.NotFoundBehaviour&lt;/code&gt; type.
          * 
          * Default: EXCEPTION
          * Group: common
+         * 
+         * @param notFoundBehaviour the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notFoundBehaviour(
                 String notFoundBehaviour) {
@@ -2169,9 +2647,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for fields, options are ALL, REFERENCED, SELECT, WHERE.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForFields the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForFields(
                 NotifyForFieldsEnum notifyForFields) {
@@ -2182,9 +2663,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for fields, options are ALL, REFERENCED, SELECT, WHERE.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForFieldsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForFields the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForFields(String notifyForFields) {
             doSetProperty("notifyForFields", notifyForFields);
@@ -2193,9 +2677,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for create operation, defaults to false (API version = 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationCreate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForOperationCreate(
                 Boolean notifyForOperationCreate) {
@@ -2205,10 +2692,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for create operation, defaults to false (API version = 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationCreate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForOperationCreate(
                 String notifyForOperationCreate) {
@@ -2218,9 +2708,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for delete operation, defaults to false (API version = 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationDelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForOperationDelete(
                 Boolean notifyForOperationDelete) {
@@ -2230,10 +2723,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for delete operation, defaults to false (API version = 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationDelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForOperationDelete(
                 String notifyForOperationDelete) {
@@ -2245,9 +2741,12 @@ public interface SalesforceEndpointBuilderFactory {
          * version 29.0).
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperations the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForOperations(
                 NotifyForOperationsEnum notifyForOperations) {
@@ -2259,9 +2758,12 @@ public interface SalesforceEndpointBuilderFactory {
          * version 29.0).
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.internal.dto.NotifyForOperationsEnum&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperations the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForOperations(
                 String notifyForOperations) {
@@ -2272,9 +2774,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for un-delete operation, defaults to false (API version =
          * 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUndelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForOperationUndelete(
                 Boolean notifyForOperationUndelete) {
@@ -2285,10 +2790,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Notify for un-delete operation, defaults to false (API version =
          * 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUndelete the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForOperationUndelete(
                 String notifyForOperationUndelete) {
@@ -2298,9 +2806,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for update operation, defaults to false (API version = 29.0).
          * 
-         * The option is a: <code>java.lang.Boolean</code> type.
+         * The option is a: &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUpdate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForOperationUpdate(
                 Boolean notifyForOperationUpdate) {
@@ -2310,10 +2821,13 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Notify for update operation, defaults to false (API version = 29.0).
          * 
-         * The option will be converted to a <code>java.lang.Boolean</code>
-         * type.
+         * The option will be converted to a
+         * &lt;code&gt;java.lang.Boolean&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param notifyForOperationUpdate the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder notifyForOperationUpdate(
                 String notifyForOperationUpdate) {
@@ -2325,9 +2839,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce objects.
          * 
          * The option is a:
-         * <code>com.fasterxml.jackson.databind.ObjectMapper</code> type.
+         * &lt;code&gt;com.fasterxml.jackson.databind.ObjectMapper&lt;/code&gt;
+         * type.
          * 
          * Group: common
+         * 
+         * @param objectMapper the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder objectMapper(Object objectMapper) {
             doSetProperty("objectMapper", objectMapper);
@@ -2338,9 +2856,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce objects.
          * 
          * The option will be converted to a
-         * <code>com.fasterxml.jackson.databind.ObjectMapper</code> type.
+         * &lt;code&gt;com.fasterxml.jackson.databind.ObjectMapper&lt;/code&gt;
+         * type.
          * 
          * Group: common
+         * 
+         * @param objectMapper the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder objectMapper(String objectMapper) {
             doSetProperty("objectMapper", objectMapper);
@@ -2350,10 +2872,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Use raw payload String for request and response (either JSON or XML
          * depending on format), instead of DTOs, false by default.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param rawPayload the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder rawPayload(boolean rawPayload) {
             doSetProperty("rawPayload", rawPayload);
@@ -2363,10 +2888,14 @@ public interface SalesforceEndpointBuilderFactory {
          * Use raw payload String for request and response (either JSON or XML
          * depending on format), instead of DTOs, false by default.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param rawPayload the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder rawPayload(String rawPayload) {
             doSetProperty("rawPayload", rawPayload);
@@ -2375,9 +2904,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce1 Analytics report Id.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param reportId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder reportId(String reportId) {
             doSetProperty("reportId", reportId);
@@ -2387,9 +2919,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce1 Analytics report metadata for filtering.
          * 
          * The option is a:
-         * <code>org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param reportMetadata the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder reportMetadata(Object reportMetadata) {
             doSetProperty("reportMetadata", reportMetadata);
@@ -2399,9 +2934,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Salesforce1 Analytics report metadata for filtering.
          * 
          * The option will be converted to a
-         * <code>org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata</code> type.
+         * &lt;code&gt;org.apache.camel.component.salesforce.api.dto.analytics.reports.ReportMetadata&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param reportMetadata the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder reportMetadata(String reportMetadata) {
             doSetProperty("reportMetadata", reportMetadata);
@@ -2410,9 +2948,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Bulk API Result ID.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param resultId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder resultId(String resultId) {
             doSetProperty("resultId", resultId);
@@ -2421,9 +2962,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject blob field name.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectBlobFieldName the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder sObjectBlobFieldName(
                 String sObjectBlobFieldName) {
@@ -2434,9 +2978,12 @@ public interface SalesforceEndpointBuilderFactory {
          * Fully qualified SObject class name, usually generated using
          * camel-salesforce-maven-plugin.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectClass the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder sObjectClass(String sObjectClass) {
             doSetProperty("sObjectClass", sObjectClass);
@@ -2445,9 +2992,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject fields to retrieve.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectFields the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder sObjectFields(String sObjectFields) {
             doSetProperty("sObjectFields", sObjectFields);
@@ -2456,9 +3006,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject ID if required by API.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectId the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder sObjectId(String sObjectId) {
             doSetProperty("sObjectId", sObjectId);
@@ -2467,9 +3020,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject external ID field name.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectIdName the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder sObjectIdName(String sObjectIdName) {
             doSetProperty("sObjectIdName", sObjectIdName);
@@ -2478,9 +3034,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject external ID field value.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectIdValue the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder sObjectIdValue(String sObjectIdValue) {
             doSetProperty("sObjectIdValue", sObjectIdValue);
@@ -2489,9 +3048,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * SObject name if required or supported by API.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectName the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder sObjectName(String sObjectName) {
             doSetProperty("sObjectName", sObjectName);
@@ -2500,9 +3062,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce SOQL query string.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectQuery the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder sObjectQuery(String sObjectQuery) {
             doSetProperty("sObjectQuery", sObjectQuery);
@@ -2511,9 +3076,12 @@ public interface SalesforceEndpointBuilderFactory {
         /**
          * Salesforce SOSL search string.
          * 
-         * The option is a: <code>java.lang.String</code> type.
+         * The option is a: &lt;code&gt;java.lang.String&lt;/code&gt; type.
          * 
          * Group: common
+         * 
+         * @param sObjectSearch the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder sObjectSearch(String sObjectSearch) {
             doSetProperty("sObjectSearch", sObjectSearch);
@@ -2523,10 +3091,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Whether to update an existing Push Topic when using the Streaming
          * API, defaults to false.
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param updateTopic the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder updateTopic(boolean updateTopic) {
             doSetProperty("updateTopic", updateTopic);
@@ -2536,10 +3107,14 @@ public interface SalesforceEndpointBuilderFactory {
          * Whether to update an existing Push Topic when using the Streaming
          * API, defaults to false.
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: common
+         * 
+         * @param updateTopic the value to set
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder updateTopic(String updateTopic) {
             doSetProperty("updateTopic", updateTopic);
@@ -2561,10 +3136,13 @@ public interface SalesforceEndpointBuilderFactory {
          * Sets whether synchronous processing should be strictly used, or Camel
          * is allowed to use asynchronous processing (if supported).
          * 
-         * The option is a: <code>boolean</code> type.
+         * The option is a: &lt;code&gt;boolean&lt;/code&gt; type.
          * 
          * Default: false
          * Group: advanced
+         * 
+         * @param synchronous the value to set
+         * @return the dsl builder
          */
         default AdvancedSalesforceEndpointBuilder synchronous(
                 boolean synchronous) {
@@ -2575,10 +3153,14 @@ public interface SalesforceEndpointBuilderFactory {
          * Sets whether synchronous processing should be strictly used, or Camel
          * is allowed to use asynchronous processing (if supported).
          * 
-         * The option will be converted to a <code>boolean</code> type.
+         * The option will be converted to a &lt;code&gt;boolean&lt;/code&gt;
+         * type.
          * 
          * Default: false
          * Group: advanced
+         * 
+         * @param synchronous the value to set
+         * @return the dsl builder
          */
         default AdvancedSalesforceEndpointBuilder synchronous(String synchronous) {
             doSetProperty("synchronous", synchronous);
@@ -2670,6 +3252,7 @@ public interface SalesforceEndpointBuilderFactory {
          * The name of the topic/channel to use
          * 
          * @param path operationName:topicName
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder salesforce(String path) {
             return SalesforceEndpointBuilderFactory.endpointBuilder("salesforce", path);
@@ -2704,6 +3287,7 @@ public interface SalesforceEndpointBuilderFactory {
          * @param componentName to use a custom component name for the endpoint
          * instead of the default name
          * @param path operationName:topicName
+         * @return the dsl builder
          */
         default SalesforceEndpointBuilder salesforce(
                 String componentName,
