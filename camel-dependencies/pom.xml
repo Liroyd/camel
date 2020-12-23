@@ -26,7 +26,7 @@
   </parent>
   <groupId>org.apache.camel</groupId>
   <artifactId>camel-dependencies</artifactId>
-  <version>3.4.5-SNAPSHOT</version>
+  <version>3.4.6-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Camel :: Dependencies</name>
   <description>Camel Dependencies POM</description>
@@ -288,7 +288,8 @@
     <jackrabbit-version>2.21.1</jackrabbit-version>
     <jackson-spark-version>2.10.4</jackson-spark-version>
     <jackson-version>1.9.12</jackson-version>
-    <jackson2-version>2.10.4</jackson2-version>
+    <jackson2-databind-version>2.10.5.1</jackson2-databind-version>
+    <jackson2-version>2.10.5</jackson2-version>
     <jain-sip-ri-bundle-version>1.2.154_2</jain-sip-ri-bundle-version>
     <jakarta-api-version>2.1.5</jakarta-api-version>
     <jakarta-jaxb-version>2.3.2</jakarta-jaxb-version>
@@ -503,7 +504,7 @@
     <scribe-version>1.3.7</scribe-version>
     <servicemix-specs-version>2.9.0</servicemix-specs-version>
     <servlet-version-range>[3,4)</servlet-version-range>
-    <shiro-version>1.5.3</shiro-version>
+    <shiro-version>1.7.0</shiro-version>
     <shrinkwrap-descriptors-version>2.0.0</shrinkwrap-descriptors-version>
     <shrinkwrap-resolver-version>3.1.3</shrinkwrap-resolver-version>
     <shrinkwrap-version>1.2.6</shrinkwrap-version>
